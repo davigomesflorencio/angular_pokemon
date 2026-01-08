@@ -1,3 +1,7 @@
+<div align="center">
+<img src="screenshots/logo.webp" alt="drawing" style="width:200px;"/>
+</div>
+
 # 🦅 Projeto Angular Pokémon
 
 Uma aplicação moderna e de alto desempenho desenvolvida com **Angular 21** para explorar dados da [PokeAPI](https://pokeapi.co/) com busca reativa . O projeto agora conta com suporte nativo para dispositivos móveis via **Capacitor**.
