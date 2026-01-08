@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">project-angular-pokemon</string>
+    <string name="title_activity_main">project-angular-pokemon</string>
+    <string name="package_name">com.davi.dev.pokemonangular</string>
+    <string name="custom_url_scheme">com.davi.dev.pokemonangular</string>
+</resources>

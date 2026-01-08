@@ -1,0 +1,125 @@
+.border-line{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.border-line::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 480px;
+    background: linear-gradient(0deg,transparent,transparent,#ff00bb,#ff00bb,#ff00bb);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.border-line::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 480px;
+    background: linear-gradient(0deg,transparent,transparent,#ff00bb,#ff00bb,#ff00bb);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box .master{
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 10px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.box .master h2{
+    color: #fff;
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.card__body {
+    background-color: #616161;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card__stats {
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.card__stats__type {
+    color: #fff;
+    font-weight: bold;
+    background-color: coral;
+    border-radius: 20px;
+    padding: 8px 12px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card__stats__type:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+p{
+    color: antiquewhite;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.pokemon-search-input {
+    width: 100%; 
+    max-width: 400px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #333; 
+    background-color: #f9f9f9; 
+    border: 2px solid #ddd; 
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: border-color 0.2s, box-shadow 0.2s; 
+    margin-bottom: 10px;
+}
+
+.pokemon-search-input:focus {
+    outline: none; 
+    border-color: coral; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pokemon-search-input::placeholder {
+    color: #aaa; 
+    font-style: italic; 
+}
+
+.text-black{
+    color: black;
+}

@@ -1,0 +1,39 @@
+<div class="flex flex-col">
+    <div class="flex-1 pt-6 ">
+        <input type="text" class="pokemon-search-input" placeholder="Digite o nome do Pokemon"
+            (input)="getPokemon($any($event.target).value)" (keyup.enter)="getPokemon($any($event.target).value, true)">
+
+    </div>
+
+    <div class="flex-1 bg-amber-200 pt-6 pb-6 ">
+        <div class="flex flex-col justify-center items-center">
+            <h2>{{ pokemon.name | titlecase }}</h2>
+            <img [src]="pokemon.sprites.front_default" height="150" alt="pokemon" srcset="">
+        </div>
+
+        <div class="card__stats">
+            @for (t of pokemon.types; track t.type.name) {
+            <span class="card__stats__type">
+                {{ t.type.name | uppercase}}
+            </span>
+            }
+        </div>
+    </div>
+</div>
+
+
+<div class="flex flex-col md:flex-row md:flex-wrap gap-4 pt-6">
+    @for (p of pokemonList; track p.id) {
+    <div class="flex-1 min-w-[150px] bg-amber-400 text-white p-4 rounded justify-center justify-items-center">
+        <img [src]="p.sprites.front_default" height="150" alt="pokemon" srcset="">
+        <h2>{{ p.name | titlecase }}</h2>
+        <div class="card__stats pt-5">
+            @for (t of p.types; track t.type.name) {
+            <span class="card__stats__type pt-4 pb-4 pl-2 pr-2">
+                {{ t.type.name | uppercase}}
+            </span>
+            }
+        </div>
+    </div>
+    }
+</div>
